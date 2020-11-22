@@ -51,20 +51,20 @@ public class Main {
 		newVideo.setUrl(JOptionPane.showInputDialog("Add video url: "));
 
 		do {
-				tag=JOptionPane.showInputDialog("Add a tag:");
-					if ("".equals(tag)) {
-						throw new Exception("Field required");		
-					} 
-					else {
-						videoTags.add(tag);
-					}
-				answerNewTag=JOptionPane.showConfirmDialog(null, "\"Do you want to add a new tag?");
-					if(answerNewTag==0) { 
-						tagGenerate=false;
-					}
-					else if(answerNewTag==1) { 
-						tagGenerate=true;
-					}
+			tag=JOptionPane.showInputDialog("Add a tag:");
+				if ("".equals(tag)) {
+					throw new Exception("Field required");		
+				} 
+				else {
+					videoTags.add(tag);
+				}
+			answerNewTag=JOptionPane.showConfirmDialog(null, "\"Do you want to add a new tag?");
+				if(answerNewTag==0) { 
+					tagGenerate=false;
+				}
+				else if(answerNewTag==1) { 
+					tagGenerate=true;
+				}
 		}while(tagGenerate==false);
 
 		return newVideo;
